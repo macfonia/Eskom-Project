@@ -1,7 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[8]:
 
 
 import numpy as np
@@ -130,10 +126,3 @@ def extract_municipality_hashtags(df):
     #solution = twitter_df["Tweets"].apply(lambda df: [municipality_dict[key] if key in list(municipality_dict.keys()) else np.nan for key in search])
     solution = twitter_df["Tweets"].apply(lambda df: [municipality_dict[key] for key in search if key in list(municipality_dict.keys())]).head(10)
     return(solution)
-
-
-# In[ ]:
-
-
-
-
